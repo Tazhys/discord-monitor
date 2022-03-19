@@ -15,7 +15,7 @@ module.exports = async(manager, oldPresence, newPresence) => {
         if (newPresence.status === 'offline') {
             const botSleeping = new MessageEmbed()
                 .setThumbnail('https://i.imgur.com/l2HornC.png')
-                .setTitle(`Application: ${manager.config.application.name}`)
+                .setTitle(`Application: BOT_NAME`)
                 .setDescription(`${manager.config.application.name} has gone offline unexpectedly. Developers are aware!`)
                 .addField(`Incident Date/Time`, `${incidentDate}`)
                 .setColor("#E2574C")
@@ -23,7 +23,7 @@ module.exports = async(manager, oldPresence, newPresence) => {
         } else if (newPresence.status === 'online') {
             const botAwoken = new MessageEmbed()
                 .setThumbnail('https://i.imgur.com/s1GZ8ah.png')
-                .setTitle(`Application: ${manager.config.application.name}`)
+                .setTitle(`Application: BOT_NAME`)
                 .setDescription(`${manager.config.application.name} is now back online and ready to serve your server!`)
                 .addField(`Incident Date/Time`, `${incidentDate}`)
                 .setColor("#3DB39E")
@@ -31,7 +31,7 @@ module.exports = async(manager, oldPresence, newPresence) => {
         } else if (newPresence.status === 'dnd') {
             const botDownTime = new MessageEmbed()
                 .setThumbnail('https://i.imgur.com/l2HornC.png')
-                .setTitle(`Application: ${manager.config.application.name}`)
+                .setTitle(`Application: BOT_NAME`)
                 .setDescription(`${manager.config.application.name} has stopped working due to an internal error!`)
                 .addField(`Incident Date/Time`, `${incidentDate}`)
                 .setColor("#f5d870")
@@ -39,7 +39,7 @@ module.exports = async(manager, oldPresence, newPresence) => {
         } else if (newPresence.status === 'idle') {
             const botUpgrade = new MessageEmbed()
                 .setThumbnail('https://i.imgur.com/OjGZA28.png')
-                .setTitle(`Application: ${manager.config.application.name}`)
+                .setTitle(`Application: BOT_NAME`)
                 .setDescription(`${manager.config.application.name} has gone down for maintenance!`)
                 .addField(`Incident Date/Time`, `${incidentDate}`)
                 .setColor("#f5d870")
