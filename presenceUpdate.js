@@ -8,7 +8,7 @@ module.exports = async(manager, oldPresence, newPresence) => {
     if (newPresence.userId !== "YOUR_DISCORD_BOT_ID") return;
 
     const channel = oldPresence.guild.channels.cache.find(chan => chan.id === "YOUR_CHANNEL_LOGGING_ID") || null;
-    const bot = manager.users.cache.get(manager.config.application.ID);
+    const bot = manager.users.cache.get("YOUR_DISCORD_BOT_ID");
     const incidentDate = moment().format('LLL')
 
     if (channel !== null) {
